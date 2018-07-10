@@ -17,7 +17,7 @@ class BookMain(object):
             sys.setdefaultencoding(default_encoding)
 
     def grab_data(self, root_url):
-        print('开始抓取数据')
+        print('开始抓取数据' , root_url)
 
 
 
