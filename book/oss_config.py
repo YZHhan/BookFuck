@@ -40,15 +40,15 @@ class OSS_Config(object):
 
     def upload_file(self):
         print("我是文件上傳")
-        # result = self.bucket.put_object("001.txt", "This is my 001 file")
+        result = self.bucket.put_object("001.txt", "This is my 001 file")
 
         # 必须以二进制的方式打开文件，因为需要知道文件包含的字节数。
-        with open('/Users/yinzh/PycharmProjects/book_fuck/book/001.txt', 'rb') as fileobj:
+        # with open('/Users/yinzh/PycharmProjects/book_fuck/book/001.txt', 'rb') as fileobj:
             # Seek方法用于指定从第1000个字节位置开始读写。上传时会从您指定的第1000个字节位置开始上传，直到文件结束。
-            fileobj.seek(1000, os.SEEK_SET)
+            # fileobj.seek(1000, os.SEEK_SET)
             # Tell方法用于返回当前位置。
-            current = fileobj.tell()
-            result = self.bucket.put_object('001.txt', fileobj)
+            # current = fileobj.tell()
+            # result = self.bucket.put_object('001.txt', fileobj)
 
 
         # HTTP返回码.

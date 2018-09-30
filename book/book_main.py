@@ -1,6 +1,7 @@
 # coding = utf-8
 import sys
 from imp import reload
+from book import url_manager, html_download, html_parser, db_utils
 
 '''
     Date:2018.07.10
@@ -15,13 +16,10 @@ class BookMain(object):
         if sys.getdefaultencoding() != default_encoding:
             reload(sys)
             sys.setdefaultencoding(default_encoding)
+            self.db_utils = db_utils.DB_Utils
 
     def grab_data(self, root_url):
-        print('开始抓取数据' , root_url)
-
-
-
-
+        print('开始抓取数据', root_url)
 
 
 if __name__ == '__main__':
